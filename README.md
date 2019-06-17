@@ -1,6 +1,4 @@
-<span style="font-size:2.5em;">**L**ightning **S**ubscription **D**ashboar<span style="color:red">d</span></span>
-
-![](readme-images/billboard.jpg)
+# Lightning Subscription Dashboard
 
 This project is inspired by: https://github.com/genesisdotre/Bitcoin-Games-nLightning-Mind-Chrome-Extension
 
@@ -21,17 +19,17 @@ RANDOM UNRELATED
 https://twitter.com/skddc/status/946008107800584192
 Been to 34c3, had a brief chance to say "hi" to @starkness and @peterktodd and  appreciate their work (they are public figures, they don't remember)
 -->
-
-# [cantbeevil.com](https://cantbeevil.com/)
+![](readme-images/billboard.jpg)
+# [CantBeEvil.com](https://cantbeevil.com/)
 
 > build and support technology that can’t abuse users
 
 You are in control of all your subscriptions.
 
-Pay for the stuff you are actually using
+Pay for the stuff you are actually using.
 
-**REVOLUTIONARY, PARADIGM SHAPESHIFTING**
-### Building blocks are here, conecting the . . .
+### Revolutionary, paradigm shapeshifting ⚡️️️⚡️️️⚡️️️
+### Building blocks are here, conecting the `. . .`
 
 It’s not Netlix and other companies keeping your billing details, credit card data.
 
@@ -74,7 +72,6 @@ Default increment: 1 minute
 Default prepayment: 15 minutes
 
 
-### Sensinble defaults
 ### Buffer reservoire grace period
 
 I don’t want to lose my subscription just because my node went offline.
@@ -89,6 +86,14 @@ Initially, as we operate in a trustless (hostile) environment, it will be a cust
 
 I think it should be voluntary. If my node stay online 24/7/365 then I do not have to prepay, otherwise its my voluntary decision to prepay for a day (have a buffer) and then do micropayments every 1000 sat.
 
+#### Assuming both nodes are online
+
+For simplicity we can assume for nodes are online:
+
+* If my node is online and their node is online then I can request the new invoice via REST API, get the invoice and pay it.
+* If my node is offline, then cannot pay anyway.
+* If their node is offline, then cannot pay anyway.
+
 
 <!-- IT ALREADY EXIXTS
 #### Positive sideeffects
@@ -97,6 +102,14 @@ It is possible that companies compeete not only on price, but conditions of the 
 It is possible that you build a relationship with a company to receive better terms. Your loyalty literally pays of.
 
 -->
+
+#### Webhook callbacks
+
+PayPal equivalent
+
+https://developer.paypal.com/docs/integration/direct/webhooks/event-names/#billing-plans-and-agreements
+
+`BILLING_AGREEMENTS.AGREEMENT.CANCELLED`
 
 
 
@@ -129,7 +142,7 @@ At the same time, it's too cumbersome for me to set up everything from scratch. 
 # ARCHITECTURE
 
 
-### Would be partnerhips integrations
+### Wannabe integrations
 ### Real-life use cases
 ### Receiving end 
 Let's assume the project is not completed and now you have an ability to stream payments on Lightning Network. But who will be the receiver on the other end?
@@ -146,34 +159,6 @@ To make a great looking demo, we will probably have to create some fictional bus
 * Perpetual Insurance
 * Digital Sea (Digital Ocean)
 -->
-
-
-
-#### Assuming both nodes are online
-If my node is online and their node is online then I can request the new invoice via REST API, get the invoice and pay it.
-If my node is offline, then cannot pay anyway.
-If their node is offline, then cannot pay anyway.
-That’s why for simplicity we can assume for nodes are online.
-
-#### Webhook callbacks
-
-PayPal equivalent
-
-https://developer.paypal.com/docs/integration/direct/webhooks/event-names/#billing-plans-and-agreements
-
-`BILLING_AGREEMENTS.AGREEMENT.CANCELLED`
-
-
-### Spontaneus payments (WIP)
-
-
-https://github.com/lightningnetwork/lnd/pull/2455
-
-Currently there is no “force push” to a force it.
-
-Currently the invoice has to be generated first and only then sent.
-
-
 
 
 
@@ -194,21 +179,26 @@ Ignorance is a bliss. So let's assume I rented a VPS *(AWS, Azure, Digital Ocean
 
 Since I started working on this project, something interesting happened, check this out:
 
-Joule Allowances - `13 June 2019`: https://twitter.com/wbobeirne/status/1139229792128180224
+* Joule Allowances - `13 June 2019`: https://twitter.com/wbobeirne/status/1139229792128180224
 
 > This is ideal for apps that have small, frequent payments to access content (For instance, a video streaming platform that charges you for every minute of viewing time.)
 
-Sablier - `1 June 2019`: https://twitter.com/PaulRBerg/status/1134773451888238592
+* Sablier - `1 June 2019`: https://twitter.com/PaulRBerg/status/1134773451888238592
 
 > It's a decentralised app for continuous payments. Up to you to decide what to use it for, but works best for paying salaries by the minute 💸
 
-https://github.com/ethereum/EIPs/issues/1620
+* ERC: Money Streaming - https://github.com/ethereum/EIPs/issues/1620
 
+### Spontaneus payments (WIP)
 
-### Join the team
+Currently there is no “force push” to a trigger payment, need to hav invoice first. 
 
-* Dave JarvisTrade       
-* Mars, marsXrobertson@gmail.com, [@marsXrobertson](https://twitter.com/marsXrobertson) on Twitter
+Check this out: https://github.com/lightningnetwork/lnd/pull/2455
+
+### Team
+
+* Mars, [@marsXrobertson](https://twitter.com/marsXrobertson) on Twitter
+* Dave
 
 
 ![](readme-images/goaway.png)
