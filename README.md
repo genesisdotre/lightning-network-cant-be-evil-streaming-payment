@@ -1,14 +1,10 @@
-# Lightning Subscription Dashboard 
-
-
+<span style="font-size:2.5em;">**L**ightning **S**ubscription **D**ashboar<span style="color:red">d</span></span>
 
 ![](readme-images/billboard.jpg)
 
-# Building blocks are here, conecting the . . .
-
 This project is inspired by: https://github.com/genesisdotre/Bitcoin-Games-nLightning-Mind-Chrome-Extension
 
-![](readme-images/activity.jpg)
+![](readme-images/activity.gif)
 
 I was trying to find if there is a way of streaming payment, literally satoshis per second.
 
@@ -26,8 +22,6 @@ https://twitter.com/skddc/status/946008107800584192
 Been to 34c3, had a brief chance to say "hi" to @starkness and @peterktodd and  appreciate their work (they are public figures, they don't remember)
 -->
 
-
-
 # [cantbeevil.com](https://cantbeevil.com/)
 
 > build and support technology that can’t abuse users
@@ -37,6 +31,7 @@ You are in control of all your subscriptions.
 Pay for the stuff you are actually using
 
 **REVOLUTIONARY, PARADIGM SHAPESHIFTING**
+### Building blocks are here, conecting the . . .
 
 It’s not Netlix and other companies keeping your billing details, credit card data.
 
@@ -51,7 +46,7 @@ You are in full control, they cannot run away with your money, they can’t be e
 
 #### Example insurance
 
-Currently: paying monthly premiums.
+Currently: paying monthly.
 
 Now you can pay every day, having more liquidity.
 
@@ -62,27 +57,24 @@ Default prepayment length: 1 week
 
 #### Example a mobile plan.
 
-Currently: 12 month contract, 1 month rolling contract, PAYG pre-paid credit with $10 coupon code
+Currently: 1 month rolling contract.
 
-Now we have a new option: satoshis per second
+Now you can pay daily.
 
 Contract day: 1 month
 Default increment: 1 hour
 Default prepayment: 1 day
 
-
-
 #### Example bike rental.
 
 As obvious as it gets. No preauthorisation, no nothing, just PAYG (pay as you go)
 
-Contract length: 1 day
+Contract length: 6 hours
 Default increment: 1 minute
-Default prepayment: 1 hour
+Default prepayment: 15 minutes
 
 
 ### Sensinble defaults
-
 ### Buffer reservoire grace period
 
 I don’t want to lose my subscription just because my node went offline.
@@ -105,8 +97,6 @@ It is possible that companies compeete not only on price, but conditions of the 
 It is possible that you build a relationship with a company to receive better terms. Your loyalty literally pays of.
 
 -->
-
-
 
 
 
@@ -146,7 +136,7 @@ Let's assume the project is not completed and now you have an ability to stream 
 
 Bitrefill - `13 June 2019` - https://www.coindesk.com/bitcoin-startup-bitrefill-raises-2-million-seed-round-for-worldwide-expansion
 
-OpneNode - `19 Decemeber 2018` - https://bitcoinmagazine.com/articles/bitcoin-payment-processor-opennode-gets-125m-investors
+OpenNode - `19 Decemeber 2018` - https://bitcoinmagazine.com/articles/bitcoin-payment-processor-opennode-gets-125m-investors
 
 <!-- NOTES ABOUT DEMO, SHOW DON'T TELL
 To make a great looking demo, we will probably have to create some fictional businesses that can accept streming payments:
