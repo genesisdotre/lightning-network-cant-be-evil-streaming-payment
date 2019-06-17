@@ -42,53 +42,34 @@ It’s you pushing payment to them.
 You are in full control, they cannot run away with your money, they can’t be evil.
 
 
-#### Example insurance
+#### Using decent defaults
 
-Currently: paying monthly.
-
-Now you can pay every day, having more liquidity.
-
-Contract day: 1 year
-Default resolution: 1 day
-Default prepayment length: 1 week
+| | insurance | mobile plan | bike rental |
+|---| --- | --- | --- |
+| **OLD:**<br>**NEW:**| pay annual<br>pay daily | pay monthly<br> pay hourly  | pay daily<br>pay every minute |
+| Default increment:|  1 day |  1 hour |  1 minute
+| Default prepayment:|  1 week |  1 day |  15 minutes
 
 
-#### Example a mobile plan.
+#### Buffer reservoire grace period
 
-Currently: 1 month rolling contract.
-
-Now you can pay daily.
-
-Contract day: 1 month
-Default increment: 1 hour
-Default prepayment: 1 day
-
-#### Example bike rental.
-
-As obvious as it gets. No preauthorisation, no nothing, just PAYG (pay as you go)
-
-Contract length: 6 hours
-Default increment: 1 minute
-Default prepayment: 15 minutes
-
-
-### Buffer reservoire grace period
+There should be some grace period.
 
 I don’t want to lose my subscription just because my node went offline.
 
-I pay for my internet, my internet is down, cannot SSH to my node and fix it. Catch-22, just like this outage by Google:  https://www.wired.com/story/google-cloud-outage-catch-22/
+> I pay for my internet, my internet is down, cannot SSH to my node and fix it. Catch-22, just like this outage by Google:  https://www.wired.com/story/google-cloud-outage-catch-22/
 
-There should be some tolerance / reservouire / buffer.
+As my longevity (reputation, loyalty) as a customer increases the service provider can tweak the values.
 
-As my longevity as a customer increases, as valued customer, the service provider can tweak their values.
+Initially, as we operate in a trustless (hostile) environment, it will be a customer who should prepay for the initial duration of the service.
 
-Initially, as we operate in a trustless (hostile) environment, it will be a customer who can prepay for the service, if they wish to.
-
+<!-- 
 I think it should be voluntary. If my node stay online 24/7/365 then I do not have to prepay, otherwise its my voluntary decision to prepay for a day (have a buffer) and then do micropayments every 1000 sat.
+-->
 
 #### Assuming both nodes are online
 
-For simplicity we can assume for nodes are online:
+For simplicity we can assume for nodes are online, if one of the nodes is offline cannot do much.
 
 * If my node is online and their node is online then I can request the new invoice via REST API, get the invoice and pay it.
 * If my node is offline, then cannot pay anyway.
@@ -103,17 +84,8 @@ It is possible that you build a relationship with a company to receive better te
 
 -->
 
-#### Webhook callbacks
 
-PayPal equivalent
-
-https://developer.paypal.com/docs/integration/direct/webhooks/event-names/#billing-plans-and-agreements
-
-`BILLING_AGREEMENTS.AGREEMENT.CANCELLED`
-
-
-
-### Minimal treshhold payment
+#### Minimal treshhold payment
 
 Fees on lightning network: unfairly cheap.
 
@@ -145,11 +117,11 @@ At the same time, it's too cumbersome for me to set up everything from scratch. 
 ### Wannabe integrations
 ### Real-life use cases
 ### Receiving end 
-Let's assume the project is not completed and now you have an ability to stream payments on Lightning Network. But who will be the receiver on the other end?
+Let's assume this project is completed and we have ability to stream payments on Lightning Network. But who will be the receiver on the other end?
 
-Bitrefill - `13 June 2019` - https://www.coindesk.com/bitcoin-startup-bitrefill-raises-2-million-seed-round-for-worldwide-expansion
+**Bitrefill** - `13 June 2019` - https://www.coindesk.com/bitcoin-startup-bitrefill-raises-2-million-seed-round-for-worldwide-expansion
 
-OpenNode - `19 Decemeber 2018` - https://bitcoinmagazine.com/articles/bitcoin-payment-processor-opennode-gets-125m-investors
+**OpenNode** - `19 Decemeber 2018` - https://bitcoinmagazine.com/articles/bitcoin-payment-processor-opennode-gets-125m-investors
 
 <!-- NOTES ABOUT DEMO, SHOW DON'T TELL
 To make a great looking demo, we will probably have to create some fictional businesses that can accept streming payments:
@@ -160,16 +132,30 @@ To make a great looking demo, we will probably have to create some fictional bus
 * Digital Sea (Digital Ocean)
 -->
 
+### Webhook callbacks
 
+* Similar to PayPal: https://developer.paypal.com/docs/integration/direct/webhooks/event-names/#billing-plans-and-agreements
+
+* `BILLING_AGREEMENTS.AGREEMENT.CANCELLED`
+
+* If the subscription is cancelled (either explicitly or via lack of payment) the receiving node should inform the service provider.
+
+### Blockstack login
+
+* This is their competition, they are sponsoring the prizes.
+* Placeholder submission: https://devpost.com/software/lightning-subscription-can-t-be-evil-streaming-payment
+* For reasons outlined above we will usee Blockstack login and submit the completed product to app mining
+
+![](readme-images/honeybadger.png)
 
 
 # BONUS
 
 ### Full control, can't be evil?
 
-Ignorance is a bliss. So let's assume I rented a VPS *(AWS, Azure, Digital Ocean)* and it's spinning CPU cycles... Is it really my own machine, my own node, how do I assure it's not backdored right from the start?
+So let's assume I rented a VPS and it's spinning CPU cycles... Is it really my own machine, my own node, how do I assure it's not backdored right from the start?
 
-* My question: https://security.stackexchange.com/questions/211243/what-are-the-techniques-to-know-if-vps-cloud-hosting-provider-is-accessing-my-da
+* The  question: https://security.stackexchange.com/questions/211243/what-are-the-techniques-to-know-if-vps-cloud-hosting-provider-is-accessing-my-da
 
 * This is cool: https://canarytokens.org/generate
 
@@ -177,7 +163,7 @@ Ignorance is a bliss. So let's assume I rented a VPS *(AWS, Azure, Digital Ocean
 
 ### Related projects ecosystem
 
-Since I started working on this project, something interesting happened, check this out:
+Since I started working on this project, I've discovered the following:
 
 * Joule Allowances - `13 June 2019`: https://twitter.com/wbobeirne/status/1139229792128180224
 
@@ -191,7 +177,7 @@ Since I started working on this project, something interesting happened, check t
 
 ### Spontaneus payments (WIP)
 
-Currently there is no “force push” to a trigger payment, need to hav invoice first. 
+Currently there is no “force push” to a trigger payment, need to have invoice first. 
 
 Check this out: https://github.com/lightningnetwork/lnd/pull/2455
 
@@ -199,6 +185,5 @@ Check this out: https://github.com/lightningnetwork/lnd/pull/2455
 
 * Mars, [@marsXrobertson](https://twitter.com/marsXrobertson) on Twitter
 * Dave
-
 
 ![](readme-images/goaway.png)
