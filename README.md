@@ -46,14 +46,15 @@ You are in full control, they cannot run away with your money, they can’t be e
 
 | | insurance | mobile plan | bike rental |
 |---| --- | --- | --- |
-| **OLD:**<br>**NEW:**| pay annual<br>pay daily | pay monthly<br> pay hourly  | pay daily<br>pay every minute |
-| Default increment:|  1 day |  1 hour |  1 minute
-| Default prepayment:|  1 week |  1 day |  15 minutes
+| **OLD 🏦** | pay annual | pay monthly  | pay daily |
+| **NEW ⚡️**| pay daily |  pay hourly | pay every minute |
+| Default increment|  1 day |  1 hour |  1 minute
+| Default prepayment|  1 week |  1 day |  15 minutes
 
 
-#### Buffer reservoire grace period
+#### Grace period
 
-There should be some grace period.
+There should be some buffer, reservoire, grace period.
 
 I don’t want to lose my subscription just because my node went offline.
 
