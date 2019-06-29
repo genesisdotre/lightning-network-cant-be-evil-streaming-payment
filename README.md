@@ -1,3 +1,7 @@
+![](readme-images/shrek-sorry.jpg)
+
+Didn't happen: https://youtu.be/ClpHkWzUJUI
+
 # Lightning Subscription Dashboard
 
 This project is inspired by: https://github.com/genesisdotre/Bitcoin-Games-nLightning-Mind-Chrome-Extension
