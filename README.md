@@ -1,6 +1,6 @@
 ![](readme-images/shrek-sorry.jpg)
 
-Didn't happen: https://youtu.be/ClpHkWzUJUI
+![](readme-images/typing.gif)
 
 # Lightning Subscription Dashboard
 
